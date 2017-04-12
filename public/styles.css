@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+.navbar {
+  position: relative;
+  height: 150px;
+  width: 100%;
+}
+.topbar {
+  position: absolute;
+  top: 0;
+  background-color: #303030;
+  width: 100%;
+  height: 30px;
+}
+.home {
+  background-color: #2e4f81;
+  border-bottom: 4px solid #E7FF99;
+}
+.content {
+  margin: auto;
+  width: 100%;
+  max-width: 960px;
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  height: 60px;
+  margin-left: 10px;
+  user-select: none;
+        -moz-user-select: none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -o-user-select: none;
+}
+.search-bar {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.search {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 10px;
+  height: 26px;
+  width: 260px;
+  padding-left: 10px;
+  padding-right: 30px;
+  font-size: 1.05em;
+  border-radius: 5px;
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 20px;
+  color: #969696
+}
+.genre-bar {
+  position: absolute;
+  bottom: 5px;
+}
+.genre {
+  margin: 3px 15px;;
+  color: white;
+  padding: 7px;
+  display: inline-block;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 0.8em
+}
+.genre:hover {
+  background-color: rgba(254, 254, 254, 0.17);
+  border-radius: 3px;
+}
