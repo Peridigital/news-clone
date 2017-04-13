@@ -1,3 +1,5 @@
-angular.module('pnoApp').controller('mainCtrl', function($scope, service) {
-  $scope.test = service.serviceTest
+angular.module('pnoApp').controller('mainCtrl', function($scope, $stateParams, service) {
+
+  $scope.genre = $stateParams
+  console.log($scope.genre);
 })

@@ -18,6 +18,58 @@ body {
   background-color: #2e4f81;
   border-bottom: 4px solid #E7FF99;
 }
+.politics {
+  background-color: #4c6483;
+  border-bottom: 4px solid #CD854C;
+}
+.us {
+  background-color: #44608E;
+  border-bottom: 4px solid #CD5C4C;
+}
+.entertainment {
+  background-color: #ab1e1e;
+  border-bottom: 4px solid #7183cb;
+}
+.tech {
+  background-color: #7e3787;
+  border-bottom: 4px solid #e7cb7e;
+}
+.science {
+  background-color: #67ad5c;
+  border-bottom: 4px solid #654d3c;
+}
+.health {
+  background-color: #4ecdcc;
+  border-bottom: 4px solid #9d446f;
+}
+.travel {
+  background-color: #e8d081;
+  border-bottom: 4px solid #3e7d70;
+}
+.home-text {
+  color: #E7FF99;
+}
+.politics-text {
+  color: #CD854C;
+}
+.us-text {
+  color: #CD5C4C;
+}
+.entertainment-text {
+  color: #7183cb;
+}
+.tech-text {
+  color: #e7cb7e;
+}
+.science-text {
+  color: #654d3c;
+}
+.health-text {
+  color: #9d446f;
+}
+.travel-text {
+  color: #3e7d70;
+}
 .content {
   margin: auto;
   width: 100%;
@@ -58,6 +110,22 @@ body {
   transform: translate(0, -50%);
   right: 20px;
   color: #969696
+}
+.logo-container {
+  position: relative;
+
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.genre-header{
+  margin: 0;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 180px;
+  transform: translate(0, -50%);
+  font-size: 3.9em;
+  font-weight: 300;
 }
 .genre-bar {
   position: absolute;
