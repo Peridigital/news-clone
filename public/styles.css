@@ -1,11 +1,16 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #eeeeee
 }
 .navbar {
   position: relative;
   height: 150px;
   width: 100%;
+
 }
 .topbar {
   position: absolute;
@@ -15,39 +20,39 @@ body {
   height: 30px;
 }
 .home {
-  background-color: #2e4f81;
-  border-bottom: 4px solid #E7FF99;
+  background-color: rgba(46, 79, 129, 0.75);
+  border-bottom: 4px solid #cbe673;
 }
 .politics {
-  background-color: #4c6483;
+  background-color: rgba(76, 100, 131, 0.75);
   border-bottom: 4px solid #CD854C;
 }
 .us {
-  background-color: #44608E;
+  background-color: rgba(68, 96, 142, 0.75);
   border-bottom: 4px solid #CD5C4C;
 }
 .entertainment {
-  background-color: #ab1e1e;
+  background-color: rgba(171, 30, 30, 0.75);
   border-bottom: 4px solid #7183cb;
 }
 .tech {
-  background-color: #7e3787;
+  background-color: rgba(126, 55, 135, 0.75);
   border-bottom: 4px solid #e7cb7e;
 }
 .science {
-  background-color: #67ad5c;
+  background-color: rgba(103, 173, 92, 0.75);
   border-bottom: 4px solid #654d3c;
 }
 .health {
-  background-color: #4ecdcc;
+  background-color: rgba(78, 205, 204, 0.75);
   border-bottom: 4px solid #9d446f;
 }
 .travel {
-  background-color: #e8d081;
+  background-color: rgba(232, 208, 129, 0.75);
   border-bottom: 4px solid #3e7d70;
 }
 .home-text {
-  color: #E7FF99;
+  color: #cbe673;
 }
 .politics-text {
   color: #CD854C;
@@ -73,7 +78,12 @@ body {
 .content {
   margin: auto;
   width: 100%;
-  max-width: 960px;
+  max-width: 1000px;
+}
+.genre-bar > a {
+  border-bottom: 0px;
+  border-bottom-color: rgba(103, 47, 112, 0);
+  color: rgba(103, 47, 112, 0);
 }
 .logo {
   position: absolute;
@@ -143,4 +153,24 @@ body {
 .genre:hover {
   background-color: rgba(254, 254, 254, 0.17);
   border-radius: 3px;
+}
+.top-article-container {
+  position: relative;
+  width: 730px;
+}
+.top-article-img {
+  width: 730px;
+  height: 438px;
+  margin-top: 15px;
+}
+.top-article-headline {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  bottom: 0px;
+}
+.top-article-headline p {
+  margin: 0px;
+  font-size: 1.2em;
+  color: white;
 }

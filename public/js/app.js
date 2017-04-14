@@ -8,13 +8,15 @@ $urlRouterProvider.when('', '/');
     .state('home', {
       templateUrl: 'views/home.html',
 
-      url: '/'
+      url: '/',
+      controller: 'homeCtrl'
 
     })
     .state('genre', {
       templateUrl: 'views/genre.html',
 
-      url: '/articles/:id'
+      url: '/articles/:id',
+      controller: 'genreCtrl'
 
     })
 
