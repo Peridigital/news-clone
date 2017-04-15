@@ -1,9 +1,64 @@
 <header-directive genre="genre" genre-class="genreClass" genre-text="genreText"></header-directive>
 <div class="content">
-  <div class="top-article-container">
-    <img class="top-article-img" ng-src="{{articles.topArticle.img}}" alt="">
-    <div class="top-article-headline" ng-class="genreClass">
-      <p>{{articles.topArticle.headline}}</p>
+  <a href="#">
+    <div class="top-article-container ">
+      <div class="top-article-img-container animated fadeIn">
+        <img class="top-article-img" ng-src="{{articles.topArticle.img}}" alt="">
+        <div class="top-article-headline" ng-class="genreClass">
+          <p>{{articles.topArticle.headline}}</p>
+        </div>
+      </div>
+  </a>
+    <div class="related-article-repeater"ng-repeat="article in articles.topArticle.relatedArticles">
+      <a href="#">
+        <div class="related-story-container animated fadeIn">
+          <p ng-class="genreHeadline">{{article.headline}}</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="" ng-repeat="article in articles.subTopArticles">
+    <div class="sub-article-container animated fadeIn">
+      <a href="#">
+        <img class="sub-article-img" ng-src="{{article.img}}" alt="">
+        <div class="sub-article-tagline" ng-class="genreClass">
+          <p>{{article.tagline}}</p>
+        </div>
+        <p class="sub-article-headline" ng-class="genreHeadline">{{article.headline}}</p>
+      </a>
     </div>
   </div>
 </div>
+<div class="content">
+  <div class="divide-line">
+    <h2>Hot Stories</h2>
+  </div>
+
+  <!-- <div class="" ng-repeat="article in articles.articles">
+    <div class="article-list-container animated fadeIn">
+      <a href="#">
+        <img class="article-list-img" ng-src="{{article.img}}" alt="">
+        <h3 class="article-list-headline" ng-class="genreHeadline">{{article.headline}}</h3>
+      </a>
+      <p class="article-list-snippet">{{article.snippet}}</p>
+    </div>
+  </div> -->
+
+  <div class="" dir-paginate="article in articles.articles | itemsPerPage: 5">
+    <div class="article-list-container animated fadeIn">
+      <a href="#">
+        <img class="article-list-img" ng-src="{{article.img}}" alt="">
+        <h3 class="article-list-headline" ng-class="genreHeadline">{{article.headline}}</h3>
+      </a>
+      <p class="article-list-snippet">{{article.snippet}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <dir-pagination-controls template-url="views/dirpagination.tpl.html" genre-headline="genreHeadline" genre-text="genreText"></dir-pagination-controls>
+</div>
+
+
+<footer class="footer"></footer>

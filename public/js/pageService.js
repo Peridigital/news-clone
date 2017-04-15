@@ -1,12 +1,13 @@
 angular.module('pnoApp').service('pageService', function() {
   this.changePage = function (id) {
-    
+
     switch (id) {
       case 'politics':
         return {
           genre: 'Politics',
           genreClass: 'politics',
-          genreText: 'politics-text'
+          genreText: 'politicsText',
+          genreHeadline: 'politicsHeadline'
 
         }
       break;
@@ -14,7 +15,8 @@ angular.module('pnoApp').service('pageService', function() {
         return {
           genre: 'U.S.',
           genreClass: 'us',
-          genreText: 'us-text'
+          genreText: 'usText',
+          genreHeadline: 'usHeadline'
 
         }
       break;
@@ -22,7 +24,8 @@ angular.module('pnoApp').service('pageService', function() {
         return {
           genre: 'Entertainment',
           genreClass: 'entertainment',
-          genreText: 'entertainment-text'
+          genreText: 'entertainmentText',
+          genreHeadline: 'entertainmentHeadline'
 
         }
       break;
@@ -30,7 +33,8 @@ angular.module('pnoApp').service('pageService', function() {
         return {
           genre: 'Tech',
           genreClass: 'tech',
-          genreText: 'tech-text'
+          genreText: 'techText',
+          genreHeadline: 'techHeadline'
 
         }
       break;
@@ -38,7 +42,8 @@ angular.module('pnoApp').service('pageService', function() {
         return {
           genre: 'Science',
           genreClass: 'science',
-          genreText: 'science-text'
+          genreText: 'scienceText',
+          genreHeadline: 'scienceHeadline'
 
         }
       break;
@@ -46,7 +51,8 @@ angular.module('pnoApp').service('pageService', function() {
         return {
           genre: 'Health',
           genreClass: 'health',
-          genreText: 'health-text'
+          genreText: 'healthText',
+          genreHeadline: 'healthHeadline'
 
         }
       break;
@@ -54,7 +60,8 @@ angular.module('pnoApp').service('pageService', function() {
         return {
           genre: 'Travel',
           genreClass: 'travel',
-          genreText: 'travel-text'
+          genreText: 'travelText',
+          genreHeadline: 'travelHeadline'
 
         }
       break;

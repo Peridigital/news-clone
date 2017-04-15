@@ -1,4 +1,4 @@
-angular.module('pnoApp', ['ui.router'])
+angular.module('pnoApp', ['ui.router', 'angularUtils.directives.dirPagination'])
 
   .config( function ($urlRouterProvider, $stateProvider ){
 
