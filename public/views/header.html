@@ -6,11 +6,18 @@
     <a href="#/">
       <img class="logo"src="./pno-logo.png" alt="PNO logo">
     </a>
-    <h2 class="genre-header home-text" ng-class="genreText">{{genre}}</h2>
+    <a href="#/articles/{{genreClass}}">
+      <h2 class="genre-header home-text" ng-class="genreText">{{genre}}</h2>
+    </a>
   </div>
   <div class="content search-bar">
-    <input class="search" type="text" name="" value="">
-    <i class="fa fa-search search-icon" aria-hidden="true"></i>
+    <form class=""  method="post" ng-submit="search()">
+      <input class="search" type="text" name="text" ng-model="searchParam" >
+    </form>
+    <div class="search-button" ng-click="search()">
+      <i class="fa fa-search search-icon" aria-hidden="true" ></i>
+    </div>
+
   </div>
   <div class="content">
     <div class="genre-bar">

@@ -1,5 +1,9 @@
 * {
   box-sizing: border-box;
+
+}
+.debugBorder {
+  border: 1px solid red;
 }
 body {
   margin: 0;
@@ -9,9 +13,15 @@ body {
 }
 .footer {
   width: 100%;
-  height: 400px;
+  height: 250px;
   background-color: #303030;
   clear: both;
+  text-align: center;
+  padding: 30px;
+}
+.footer p{
+  color: #b0b0b0
+
 }
 .navbar {
   position: relative;
@@ -74,10 +84,10 @@ body {
   color: #e7cb7e;
 }
 .scienceText {
-  color: #654d3c;
+  color: #a17b60;
 }
 .healthText {
-  color: #9d446f;
+  color: #c44281;
 }
 .travelText {
   color: #3e7d70;
@@ -99,25 +109,31 @@ body {
   color: #e7cb7e;
 }
 .scienceHeadline:hover {
-  color: #654d3c;
+  color: #a17b60;
 }
 .healthHeadline:hover {
-  color: #9d446f;
+  color: #c44281;
 }
 .travelHeadline:hover {
   color: #3e7d70;
 }
 
 .content {
+
   margin: auto;
   width: 100%;
   max-width: 1030px;
   clear: both;
 }
+.search-content {
+  margin: auto;
+  width: 100%;
+  max-width: 960px;
+  clear: both;
+}
  a {
-  border-bottom: 0px;
-  border-bottom-color: rgba(103, 47, 112, 0);
-  color: rgba(103, 47, 112, 0);
+  text-decoration: none;
+  color: black;
 }
 .logo {
   position: absolute;
@@ -151,9 +167,69 @@ body {
 .search-icon {
   position: absolute;
   top: 50%;
-  transform: translate(0, -50%);
-  right: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
   color: #969696
+}
+.search-button {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+}
+.search-header {
+  clear: both;
+  position: relative;
+  height: 90px;
+  width: 100%;
+}
+.search-header i {
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 180px
+}
+.search-topbar {
+  position: relative;
+  top: 0;
+  background-color: #303030;
+  width: 100%;
+  height: 30px;
+}
+.search-page-search {
+  width: 100%;
+  height: 40px;
+  margin: auto;
+  padding-left: 40px;
+  font-size: 1.8em
+}
+.search-page-button {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+.search-page-button:hover {
+  background-color: #dddddd;
+  border: 1px solid rgb(173, 173, 173)
+}
+.search-page-bar {
+  position: relative;
+  margin: auto;
+
+  width: 100%;
+}
+.result-count {
+  margin-top: 50px;
+  margin-left: 5px;
 }
 .logo-container {
   position: relative;
@@ -161,6 +237,7 @@ body {
   top: 50%;
   transform: translate(0, -50%);
 }
+
 .genre-header{
   margin: 0;
   display: inline-block;
@@ -256,14 +333,14 @@ body {
   font-size: 1.3em;
   margin: 0
 }
-/*.related-story-container:first-child {
-  border-top: 0px solid #acacac;
-  background-color: red
-}*/
-.divide-line {
-  border-bottom: 3px solid #7c7c7c
+.related-article-repeater > :first-child {
+  border-top: 0px;
 }
-.article-list-container {
+.divide-line {
+  border-bottom: 3px solid #7c7c7c;
+  clear: both;
+}
+.hot-article-list-container {
   position: relative;
   float: left;
   clear: both;
@@ -271,39 +348,78 @@ body {
   width: 100%;
   padding: 15px;
 }
-.article-list-headline{
+.hot-article-list-headline{
   float: left;
   margin: 5px;
   margin-left: 25px;
   color: black;
 }
-.article-list-snippet{
+.hot-article-list-snippet{
   float: left;
   margin: 5px;
   margin-left: 25px;
   max-width: 600px;
 }
-.article-list-img {
+.hot-article-list-img {
   width: 275px;
   float: left;
 }
-.pagination {
-  margin-left: auto;
+.article-list {
+  /*display: flex;
+  flex-wrap: wrap;
+  align-content: center;*/
+  min-height: 300px;
+  margin-top: 10px;
 }
-.pagination-control {
+.article-list-container {
+  position: relative;
+  float: left;
+  clear: left;
+  border-bottom: 1px solid #acacac;
+  width: 500px;
+  margin: 0 7px;
+  padding: 5px 0;
+
+}
+.article-list-container:nth-child(even) {
+  float: right;
+  clear: right;
+}
+.article-list-headline{
+  float: left;
+  margin: 4px;
+  font-size: 0.9em
+  margin-left: 25px;
+  color: black;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0
+}
+.pagination a {
+  text-decoration: none;
+}
+.paginationControl {
   color: black;
   text-decoration: none;
-  font-size: 1.5em;
+
+
 }
 .pagination li {
-  float: left;
+
+  /*float: right;*/
   margin: 5px;
   list-style: none;
+  font-size: 1.5em;
+
 }
 .disabled a{
   color: rgb(145, 145, 145) !important;
   cursor: default;
 }
-.active {
-  text-decoration: underline;
+.pagination-controls-container {
+
 }

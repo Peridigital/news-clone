@@ -1,6 +1,6 @@
 angular.module('pnoApp').controller('genreCtrl', function($scope, $state, $stateParams, pageService, articleService) {
   $scope.enterPage = function enterPage() {
-    var pageInfo = pageService.changePage($stateParams.id)
+    var pageInfo = pageService.changePage($stateParams.genre)
     if (pageInfo) {
       $scope.genre = pageInfo.genre
       $scope.genreClass = pageInfo.genreClass

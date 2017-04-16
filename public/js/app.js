@@ -15,8 +15,24 @@ $urlRouterProvider.when('', '/');
     .state('genre', {
       templateUrl: 'views/genre.html',
 
-      url: '/articles/:id',
+      url: '/articles/:genre',
       controller: 'genreCtrl'
+
+    })
+    .state('article', {
+      templateUrl: 'views/home.html',
+
+      url: '/articles/:genre/:id',
+      controller: 'homeCtrl'
+
+    })
+    .state('search', {
+      templateUrl: 'views/search.html',
+      params: {
+        search: null
+      },
+      url: '/search/:search',
+      controller: 'searchCtrl'
 
     })
 

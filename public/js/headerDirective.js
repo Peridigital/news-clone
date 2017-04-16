@@ -8,9 +8,10 @@ angular.module('pnoApp')
       genreClass: '=',
       genreText: '='
     },
-    controller: function( $scope ) {
-      $scope.selectCard = function () {
+    controller: function( $scope, $state ) {
 
+      $scope.search = function () {
+        $state.go('search', {search: $scope.searchParam})
       }
     },
     link: function(scope, element, attributes ) {

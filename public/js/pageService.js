@@ -1,7 +1,7 @@
 angular.module('pnoApp').service('pageService', function() {
-  this.changePage = function (id) {
+  this.changePage = function (genre) {
 
-    switch (id) {
+    switch (genre) {
       case 'politics':
         return {
           genre: 'Politics',

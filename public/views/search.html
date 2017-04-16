@@ -1,5 +1,28 @@
-<header-directive></header-directive>
-Test, hello!
+<div class="search-topbar">
+
+</div>
+<div class="search-header home">
+
+  <div class="content logo-container">
+    <a href="#/">
+      <img class="logo"src="./pno-logo.png" alt="PNO logo">
+    </a>
+    <i class="fa fa-search homeText" aria-hidden="true" ></i>
+  </div>
+</div>
+
+
+<div class="search-content">
+  <p class="result-count">{{resultsCount}} results found for</p>
+  <form class="search-page-bar"  method="post" ng-submit="search()">
+
+    <input class="search-page-search" type="text" name="text" ng-model="searchParam" >
+    <div class="search-page-button" ng-click="search()">
+      <i class="fa fa-search search-icon" aria-hidden="true" ></i>
+    </div>
+  </form>
+
+</div>
 <footer class="footer">
   <div class="content">
     <p>This website was made purely for the purposes of practice. If you would like to sue me, I request that you don't.</p>

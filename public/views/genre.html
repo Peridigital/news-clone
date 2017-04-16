@@ -9,12 +9,14 @@
         </div>
       </div>
   </a>
-    <div class="related-article-repeater"ng-repeat="article in articles.topArticle.relatedArticles">
-      <a href="#">
-        <div class="related-story-container animated fadeIn">
-          <p ng-class="genreHeadline">{{article.headline}}</p>
-        </div>
-      </a>
+    <div class="related-article-repeater">
+      <div  class="related-story-container" ng-repeat="article in articles.topArticle.relatedArticles">
+        <a href="#">
+          <div class=" animated fadeIn">
+            <p ng-class="genreHeadline">{{article.headline}}</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -35,30 +37,45 @@
     <h2>Hot Stories</h2>
   </div>
 
-  <!-- <div class="" ng-repeat="article in articles.articles">
-    <div class="article-list-container animated fadeIn">
+  <div class="" ng-repeat="article in articles.hotArticles">
+    <div class="hot-article-list-container animated fadeIn">
       <a href="#">
-        <img class="article-list-img" ng-src="{{article.img}}" alt="">
-        <h3 class="article-list-headline" ng-class="genreHeadline">{{article.headline}}</h3>
+        <img class="hot-article-list-img" ng-src="{{article.img}}" alt="">
+        <h3 class="hot-article-list-headline" ng-class="genreHeadline">{{article.headline}}</h3>
       </a>
-      <p class="article-list-snippet">{{article.snippet}}</p>
+      <p class="hot-article-list-snippet">{{article.snippet}}</p>
     </div>
-  </div> -->
+  </div>
 
-  <div class="" dir-paginate="article in articles.articles | itemsPerPage: 5">
-    <div class="article-list-container animated fadeIn">
-      <a href="#">
-        <img class="article-list-img" ng-src="{{article.img}}" alt="">
-        <h3 class="article-list-headline" ng-class="genreHeadline">{{article.headline}}</h3>
-      </a>
-      <p class="article-list-snippet">{{article.snippet}}</p>
+
+  <div class="divide-line">
+
+  </div>
+
+  <div class="article-list">
+    <div class="article-list-container" dir-paginate="article in articles.articles | itemsPerPage: 14">
+      <div class=" animated fadeIn">
+        <a href="#">
+
+          <p class="article-list-headline" ng-class="genreHeadline">{{article.headline}}</p>
+        </a>
+
+      </div>
     </div>
   </div>
 </div>
 
 <div class="content">
-  <dir-pagination-controls template-url="views/dirpagination.tpl.html" genre-headline="genreHeadline" genre-text="genreText"></dir-pagination-controls>
+  <div class="pagination-controls-container">
+    <dir-pagination-controls  template-url="views/dirpagination.tpl.html" genre-headline="genreHeadline" genre-text="genreText"></dir-pagination-controls>
+  </div>
 </div>
 
 
-<footer class="footer"></footer>
+<footer class="footer">
+  <div class="content">
+    <p>This website was made purely for the purposes of practice. If you would like to sue me, I request that you don't.</p>
+    <p>Pretend News Organization (PNO) is not real, and in fact, made up. Any news article on this site is almost certainly false.</p>
+    <p>Here's some more words: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</footer>
