@@ -118,6 +118,32 @@ body {
   color: #3e7d70;
 }
 
+.homeArticle a {
+  color: #a0d000;
+}
+.politicsArticle a {
+  color: #CD854C;
+}
+.usArticle a {
+  color: #CD5C4C;
+}
+.entertainmentArticle a {
+  color: #7183cb;
+}
+.techArticle a {
+  color: #e7cb7e;
+}
+.scienceArticle a {
+  color: #a17b60;
+}
+.healthArticle a {
+  color: #c44281;
+}
+.travelArticle a {
+  color: #3e7d70;
+}
+
+
 .content {
 
   margin: auto;
@@ -140,7 +166,7 @@ body {
   top: 50%;
   transform: translate(0, -50%);
   height: 60px;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
   user-select: none;
         -moz-user-select: none;
         -khtml-user-select: none;
@@ -451,6 +477,62 @@ body {
   color: rgb(145, 145, 145) !important;
   cursor: default;
 }
-.pagination-controls-container {
+.article-headline {
+  font-size: 3.2em;
+  margin: 25px 0;
+  font-weight: 400;
+}
+.article-content {
+  width: 68%;
+  margin-bottom: 50px;
+  float: left;
+}
+.article-container p {
+  font-size: 1.1em;
 
+}
+.article-author {
+  margin-bottom: 5px;
+}
+.article-container a:hover {
+  text-decoration: underline;
+}
+.article-img {
+  max-width: 100%;
+}
+.article-date {
+  margin-top: 0px;
+  color: #747373
+}
+.article-side-ad {
+
+  max-width: 100%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+.sidebar-content {
+  width: 28%;
+  position: relative;
+  float: right;
+}
+.sidebar-top-articles {
+  margin-bottom: 25px;
+}
+.sidebar-top-articles-header{
+  padding: 5px;
+  border-width: 2px;
+}
+.sidebar-top-articles-header h4 {
+  color: white;
+  font-size: 1.3em;
+  margin: 2px;
+  margin-top: 0px;
+  margin-left: 10px;
+}
+.sidebar-top-article-container {
+  border-bottom: 1px solid #acacac;
+}
+.sidebar-top-article-container p {
+  margin: 8px;
 }

@@ -7,7 +7,8 @@ angular.module('pnoApp').service('pageService', function() {
           genre: 'Politics',
           genreClass: 'politics',
           genreText: 'politicsText',
-          genreHeadline: 'politicsHeadline'
+          genreHeadline: 'politicsHeadline',
+          genreArticle: 'politicsArticle'
 
         }
       break;
@@ -16,7 +17,8 @@ angular.module('pnoApp').service('pageService', function() {
           genre: 'U.S.',
           genreClass: 'us',
           genreText: 'usText',
-          genreHeadline: 'usHeadline'
+          genreHeadline: 'usHeadline',
+          genreArticle: 'usArticle'
 
         }
       break;
@@ -25,7 +27,8 @@ angular.module('pnoApp').service('pageService', function() {
           genre: 'Entertainment',
           genreClass: 'entertainment',
           genreText: 'entertainmentText',
-          genreHeadline: 'entertainmentHeadline'
+          genreHeadline: 'entertainmentHeadline',
+          genreArticle: 'entertainmentArticle'
 
         }
       break;
@@ -34,7 +37,8 @@ angular.module('pnoApp').service('pageService', function() {
           genre: 'Tech',
           genreClass: 'tech',
           genreText: 'techText',
-          genreHeadline: 'techHeadline'
+          genreHeadline: 'techHeadline',
+          genreArticle: 'techArticle'
 
         }
       break;
@@ -43,7 +47,8 @@ angular.module('pnoApp').service('pageService', function() {
           genre: 'Science',
           genreClass: 'science',
           genreText: 'scienceText',
-          genreHeadline: 'scienceHeadline'
+          genreHeadline: 'scienceHeadline',
+          genreArticle: 'scienceArticle'
 
         }
       break;
@@ -52,7 +57,8 @@ angular.module('pnoApp').service('pageService', function() {
           genre: 'Health',
           genreClass: 'health',
           genreText: 'healthText',
-          genreHeadline: 'healthHeadline'
+          genreHeadline: 'healthHeadline',
+          genreArticle: 'healthArticle'
 
         }
       break;
@@ -61,7 +67,8 @@ angular.module('pnoApp').service('pageService', function() {
           genre: 'Travel',
           genreClass: 'travel',
           genreText: 'travelText',
-          genreHeadline: 'travelHeadline'
+          genreHeadline: 'travelHeadline',
+          genreArticle: 'travelArticle'
 
         }
       break;

@@ -1,4 +1,4 @@
-angular.module('pnoApp', ['ui.router', 'angularUtils.directives.dirPagination'])
+angular.module('pnoApp', ['ui.router', 'angularUtils.directives.dirPagination', 'ngSanitize'])
 
   .config( function ($urlRouterProvider, $stateProvider ){
 
@@ -24,7 +24,7 @@ $urlRouterProvider.when('', '/');
     .state('article', {
       templateUrl: 'views/article.html',
 
-      url: '/articles/:genre/:id/',
+      url: '/articles/:genre/:id',
       controller: 'articleCtrl'
 
     })
