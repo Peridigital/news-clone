@@ -8,8 +8,27 @@ angular.module('pnoApp').service('articleService', function() {
 
   }
 
+  this.getArticlesBySearch = function (search) {
+    console.log(search);
+    if (search) {
+      if (search === 'Correct test') {
+        return articles
+      } else if (search === 'Test') {
+        return politicsArticles
+      }
+     }
+  }
 
+  this.getArticleById = function (id) {
+    if (id == '1') {
+      return article
+    }
+  }
 
+  var article = {
+    img: 'https://unsplash.it/1000/600?image=0',
+    headline: 'How To Win Friends And Influence People with Blackmail'
+  }
   var articles = {
     topArticle: {
       img: 'https://unsplash.it/1000/600?image=0',

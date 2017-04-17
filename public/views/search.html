@@ -13,7 +13,7 @@
 
 
 <div class="search-content">
-  <p class="result-count">{{resultsCount}} results found for</p>
+  <p class="result-count">{{resultCount}} results found for</p>
   <form class="search-page-bar"  method="post" ng-submit="search()">
 
     <input class="search-page-search" type="text" name="text" ng-model="searchParam" >
@@ -22,6 +22,26 @@
     </div>
   </form>
 
+</div>
+
+<div class="search-content results">
+  <div class="result-list">
+    <div class="result-list-container" dir-paginate="article in articles.articles | itemsPerPage: 10">
+      <div class=" animated fadeIn">
+        <a href="#">
+          <img class="result-list-img" ng-src="{{article.img}}" alt="">
+          <p class="result-list-headline" ng-class="genreHeadline">{{article.headline}}</p>
+        </a>
+        <p class="result-list-snippet">{{article.snippet | limitTo:300}}...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="pagination-controls-container">
+    <dir-pagination-controls  template-url="views/dirpagination.tpl.html" genre-headline="genreHeadline" genre-text="genreText"></dir-pagination-controls>
+  </div>
 </div>
 <footer class="footer">
   <div class="content">

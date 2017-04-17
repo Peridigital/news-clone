@@ -19,11 +19,13 @@ $urlRouterProvider.when('', '/');
       controller: 'genreCtrl'
 
     })
-    .state('article', {
-      templateUrl: 'views/home.html',
 
-      url: '/articles/:genre/:id',
-      controller: 'homeCtrl'
+
+    .state('article', {
+      templateUrl: 'views/article.html',
+
+      url: '/articles/:genre/:id/',
+      controller: 'articleCtrl'
 
     })
     .state('search', {

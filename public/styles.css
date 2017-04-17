@@ -38,7 +38,7 @@ body {
 }
 .home {
   background-color: rgba(46, 79, 129, 0.75);
-  border-bottom: 4px solid #cbe673;
+  border-bottom: 4px solid #a0d000;
 }
 .politics {
   background-color: rgba(76, 100, 131, 0.75);
@@ -69,7 +69,7 @@ body {
   border-bottom: 4px solid #3e7d70;
 }
 .homeText {
-  color: #cbe673;
+  color: #a0d000;
 }
 .politicsText {
   color: #CD854C;
@@ -94,7 +94,7 @@ body {
 }
 
 .homeHeadline:hover {
-  color: #cbe673;
+  color: #a0d000;
 }
 .politicsHeadline:hover {
   color: #CD854C;
@@ -224,12 +224,43 @@ body {
 .search-page-bar {
   position: relative;
   margin: auto;
-
+  margin-bottom: 10px;
   width: 100%;
 }
 .result-count {
   margin-top: 50px;
   margin-left: 5px;
+}
+.results {
+  min-height: 600px;
+}
+.result-list {
+
+}
+.result-list-container {
+  position: relative;
+  float: left;
+  clear: both;
+  border-bottom: 1px solid #acacac;
+  width: 100%;
+  padding: 15px;
+}
+.result-list-img {
+  width: 200px;
+  float: right;
+}
+.result-list-headline {
+  float: left;
+  margin: 0px;
+  font-size: 1.2em;
+  margin-left: 25px;
+  color: black;
+}
+.result-list-snippet{
+  float: left;
+  margin-left: 25px;
+  max-width: 600px;
+  font-size: 0.8em;
 }
 .logo-container {
   position: relative;
@@ -388,7 +419,7 @@ body {
 .article-list-headline{
   float: left;
   margin: 4px;
-  font-size: 0.9em
+  font-size: 0.9em;
   margin-left: 25px;
   color: black;
 }
