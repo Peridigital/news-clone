@@ -25,6 +25,10 @@ angular.module('pnoApp').service('articleService', function() {
     }
   }
 
+  this.getHomeArticles = function () {
+    return homeArticles
+  }
+
 
   var article = {
     img: 'https://unsplash.it/1000/600?image=623',
@@ -32,7 +36,7 @@ angular.module('pnoApp').service('articleService', function() {
     author: 'Bringo Jackson',
     postDate: String(new Date()),
     body: '<p> <b>Lorem ipsum:</b> dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>' +
-          '<p> Corem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit, et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint. <br> <br> Occaecat cupidatat non proident, <a href="#">sunt in culpa</a> qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>'
+          '<p> Corem ipsum dolor sit amet, <a href="#">consectetur adipisicing</a> elit, et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et. <br> <br> Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut. <br> <br> Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. <br> <br> Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint. <br> <br> Occaecat cupidatat non proident, <a href="#">sunt in culpa</a> qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.<br> <br> Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. <br> <br> Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum Corem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br> <br>  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum </p>'
   }
   var articles = {
     topArticle: {
@@ -416,6 +420,157 @@ angular.module('pnoApp').service('articleService', function() {
         tagline: 'Death, who needs it?'
       },
     ]
+  }
+
+  var homeArticles = {
+    topArticles: [
+      {
+        img: 'https://unsplash.it/1000/600?image=30',
+        headline: '5 Secrets: How To Use Fire To Create A Successful Business'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=430',
+        headline: 'Want More Money? Begin A Danger Fraught Adventure'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=530',
+        headline: 'The Secret Of Being Terrible'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=730',
+        headline: '6 Surefire Ways Cindy Will Drive Your Business Into The Ground'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=830',
+        headline: 'Your Key To Success: A Bear'
+      }
+    ],
+    politics: [
+    {
+      img: 'https://unsplash.it/1000/600?image=430',
+      headline: 'Want More Money? Begin A Danger Fraught Adventure'
+    },
+      {
+        img: 'https://unsplash.it/1000/600?image=530',
+        headline: 'The Secret Of Being Terrible'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=730',
+        headline: '6 Surefire Ways Cindy Will Drive Your Business Into The Ground'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=830',
+        headline: 'Your Key To Success: A Bear'
+      }
+    ],
+    us: [
+    {
+      img: 'https://unsplash.it/1000/600?image=420',
+      headline: 'Want More Money? Begin A Danger Fraught Adventure'
+    },
+      {
+        img: 'https://unsplash.it/1000/600?image=530',
+        headline: 'The Secret Of Being Terrible'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=730',
+        headline: '6 Surefire Ways Cindy Will Drive Your Business Into The Ground'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=830',
+        headline: 'Your Key To Success: A Bear'
+      }
+    ],
+    entertainment: [
+    {
+      img: 'https://unsplash.it/1000/600?image=490',
+      headline: 'Want More Money? Begin A Danger Fraught Adventure'
+    },
+      {
+        img: 'https://unsplash.it/1000/600?image=530',
+        headline: 'The Secret Of Being Terrible'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=730',
+        headline: '6 Surefire Ways Cindy Will Drive Your Business Into The Ground'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=830',
+        headline: 'Your Key To Success: A Bear'
+      }
+    ],
+    tech: [
+    {
+      img: 'https://unsplash.it/1000/600?image=437',
+      headline: 'Want More Money? Begin A Danger Fraught Adventure'
+    },
+      {
+        img: 'https://unsplash.it/1000/600?image=530',
+        headline: 'The Secret Of Being Terrible'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=730',
+        headline: '6 Surefire Ways Cindy Will Drive Your Business Into The Ground'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=830',
+        headline: 'Your Key To Success: A Bear'
+      }
+    ],
+    science: [
+    {
+      img: 'https://unsplash.it/1000/600?image=999',
+      headline: 'Want More Money? Begin A Danger Fraught Adventure'
+    },
+      {
+        img: 'https://unsplash.it/1000/600?image=530',
+        headline: 'The Secret Of Being Terrible'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=730',
+        headline: '6 Surefire Ways Cindy Will Drive Your Business Into The Ground'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=830',
+        headline: 'Your Key To Success: A Bear'
+      }
+    ],
+    health: [
+    {
+      img: 'https://unsplash.it/1000/600?image=436',
+      headline: 'Want More Money? Begin A Danger Fraught Adventure'
+    },
+      {
+        img: 'https://unsplash.it/1000/600?image=530',
+        headline: 'The Secret Of Being Terrible'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=730',
+        headline: '6 Surefire Ways Cindy Will Drive Your Business Into The Ground'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=830',
+        headline: 'Your Key To Success: A Bear'
+      }
+    ],
+    travel: [
+    {
+      img: 'https://unsplash.it/1000/600?image=123',
+      headline: 'Want More Money? Begin A Danger Fraught Adventure'
+    },
+      {
+        img: 'https://unsplash.it/1000/600?image=530',
+        headline: 'The Secret Of Being Terrible'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=730',
+        headline: '6 Surefire Ways Cindy Will Drive Your Business Into The Ground'
+      },
+      {
+        img: 'https://unsplash.it/1000/600?image=830',
+        headline: 'Your Key To Success: A Bear'
+      }
+    ],
   }
 
   var politicsArticles = {

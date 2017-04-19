@@ -16,9 +16,9 @@ angular.module('pnoApp').controller('articleCtrl', function($scope, $state, $sta
   $scope.articles = articleService.getArticlesByGenre($stateParams.genre)
   $scope.article = articleService.getArticleById($stateParams.id)
   if ($scope.article) {
-    console.log($scope.article.postDate);
+
     var date = new Date($scope.article.postDate)
-    console.log(date);
+
     var month
     switch (date.getMonth()) {
       case 0:
@@ -61,7 +61,6 @@ angular.module('pnoApp').controller('articleCtrl', function($scope, $state, $sta
 
     }
     $scope.article.date = month + ' ' + date.getDate() + ', ' + date.getFullYear()
-    console.log($scope.article.date);
   } else {
     $scope.invalid = true
   }

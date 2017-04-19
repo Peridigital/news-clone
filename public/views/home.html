@@ -1,5 +1,43 @@
-<header-directive></header-directive>
-Test, hello!
+<header-directive genre="genre" genre-class="genreClass" genre-text="genreText" ></header-directive>
+
+<div class="home-page">
+  <div class="home-background">
+    <div class="content animated fadeIn ">
+
+      <carousel-directive class="" articles="articles.topArticles" genre-class="genreClass"></carousel-directive>
+      <div class="home-divide-line">
+
+      </div>
+    </div>
+  </div>
+  <div class="">
+    <div class="content">
+      <div class="home-article-row">
+        <home-story-directive genre="'Politics'" genre-class="genreClass" genre-text="genreText" genre-headline="genreHeadline" articles="articles.politics"></home-story-directive>
+        <home-story-directive genre="'U.S.'" genre-class="genreClass" genre-text="genreText" genre-headline="genreHeadline" articles="articles.us"></home-story-directive>
+        <div class="fake-ad-square">
+          <img src="./fake-lyft-ad.png" alt="">
+          <p>Advertisement</p>
+        </div>
+      </div>
+      <div class="home-article-row">
+        <home-story-directive genre="'Entertainment'" genre-class="genreClass" genre-text="genreText" genre-headline="genreHeadline" articles="articles.entertainment"></home-story-directive>
+        <home-story-directive genre="'Tech'" genre-class="genreClass" genre-text="genreText" genre-headline="genreHeadline" articles="articles.tech"></home-story-directive>
+        <home-story-directive genre="'Science'" genre-class="genreClass" genre-text="genreText" genre-headline="genreHeadline" articles="articles.science"></home-story-directive>
+      </div>
+      <div class="home-article-row">
+        <home-story-directive genre="'Health'" genre-class="genreClass" genre-text="genreText" genre-headline="genreHeadline" articles="articles.health"></home-story-directive>
+        <home-story-directive genre="'Travel'" genre-class="genreClass" genre-text="genreText" genre-headline="genreHeadline" articles="articles.travel"></home-story-directive>
+        <div class="fake-ad-square">
+          <img src="./fake-hyper-ad.png" alt="">
+          <p>Advertisement</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <footer class="footer">
   <div class="content">
     <p>This website was made purely for the purposes of practice. If you would like to sue me, I request that you don't.</p>
