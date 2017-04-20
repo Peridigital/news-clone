@@ -1,4 +1,4 @@
-angular.module('pnoApp').controller('homeCtrl', function($scope, $state, $stateParams, pageService, articleService) {
+angular.module('pnoApp').controller('homeCtrl', function($scope, $state, $stateParams, $timeout, pageService, articleService) {
   $scope.enterPage = function enterPage() {
 
     $scope.genre = 'News'
@@ -9,5 +9,14 @@ angular.module('pnoApp').controller('homeCtrl', function($scope, $state, $stateP
   $scope.enterPage()
   articleService.getHomeArticles().then(function (res) {
     $scope.articles = res
+    $timeout(function () {
+      $('.home-carousel').slick({
+        accessibility: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        dots: true,
+        arrows: false,
+      });
+    })
   })
 })

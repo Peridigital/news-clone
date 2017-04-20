@@ -16,15 +16,7 @@ angular.module('pnoApp')
       }
     },
     link: function(scope, element, attributes ) {
-      $timeout(function () {
-        $('.home-carousel').slick({
-          accessibility: true,
-          autoplay: true,
-          autoplaySpeed: 4000,
-          dots: true,
-          arrows: false,
-        });
-      })
+      
     }
   }
 });
