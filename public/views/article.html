@@ -3,14 +3,14 @@
   <h1>Regrettably,</h1>
   <p>We were unable to find that article.</p>
 </div>
-<div class="content animated fadeIn">
+<div ng-hide="invalid" class="content animated fadeIn">
   <h1 class="article-headline">{{article.headline}}</h1>
 
   <p class="article-author">By <b ng-class="genreText">{{article.author}}</b>, PNO</p>
   <p class="article-date">Published {{article.date}}</p>
   <div class="article-content">
 
-    <img class="article-img" src="{{article.img}}" alt="">
+    <img class="article-img" src="{{article.img}}" onerror="this.src='pno-placeholder.png'" alt="">
     <div class="article-container"ng-class="genreArticle" ng-bind-html="article.body">
 
     </div>
@@ -21,7 +21,7 @@
         <h4>Top stories</h4>
       </div>
       <div class="sidebar-top-article-container" ng-repeat="article in articles.articles | limitTo:3">
-        <a href="#">
+        <a href="#/articles/{{article.genre}}/{{article.pageid}}">
           <p ng-class="genreHeadline">{{article.headline}}</p>
         </a>
       </div>
@@ -30,6 +30,9 @@
       <img class="article-side-ad" src="fake-model-home-ad.png" alt="">
     </a>
   </div>
+</div>
+<div class="content">
+  <img class="fake-fter-ad" src="./fake-jet-ad.png" alt="fake-ad">
 </div>
 <footer class="footer">
   <div class="content">

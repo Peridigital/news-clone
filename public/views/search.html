@@ -26,10 +26,10 @@
 
 <div class="search-content results">
   <div class="result-list">
-    <div class="result-list-container" dir-paginate="article in articles.articles | itemsPerPage: 10">
+    <div class="result-list-container" dir-paginate="article in articles | itemsPerPage: 10">
       <div class=" animated fadeIn">
-        <a href="#">
-          <img class="result-list-img" ng-src="{{article.img}}" alt="">
+        <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+          <img class="result-list-img" onerror="this.src='pno-placeholder.png'"ng-src="{{article.img}}" alt="">
           <p class="result-list-headline" ng-class="genreHeadline">{{article.headline}}</p>
         </a>
         <p class="result-list-snippet">{{article.snippet | limitTo:300}}...</p>

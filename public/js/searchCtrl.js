@@ -5,16 +5,19 @@ angular.module('pnoApp').controller('searchCtrl', function($scope, $state, $stat
   $scope.genreText = 'homeText'
   $scope.genreHeadline = 'homeHeadline'
 
-  $scope.articles = articleService.getArticlesBySearch($stateParams.search)
-  if ($scope.articles) {
-    $scope.resultCount = $scope.articles.articles.length
-  } else {
-    $scope.resultCount = 0
-    $scope.articles = {
-      articles: []
+  articleService.getArticlesBySearch($stateParams.search).then(function (res) {
+    $scope.articles = res
+    if ($scope.articles) {
+      $scope.resultCount = $scope.articles.length
+    } else {
+      $scope.resultCount = 0
+      $scope.articles = {
+        articles: []
+      }
     }
-  }
-  
+  })
+
+
   $scope.searchParam = $stateParams.search
 
   $scope.search = function () {

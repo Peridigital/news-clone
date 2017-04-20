@@ -1,6 +1,6 @@
 <header-directive genre="genre" genre-class="genreClass" genre-text="genreText"></header-directive>
 <div class="content">
-  <a href="#/articles/{{articles.topArticle.genre}}/{{articles.topArticle.pageId}}">
+  <a href="#/articles/{{articles.topArticle.genre}}/{{articles.topArticle.pageid}}">
     <div class="top-article-container ">
       <div class="top-article-img-container animated fadeIn">
         <img class="top-article-img" ng-src="{{articles.topArticle.img}}" alt="">
@@ -10,8 +10,8 @@
       </div>
   </a>
     <div class="related-article-repeater">
-      <div  class="related-story-container" ng-repeat="article in articles.topArticle.relatedArticles">
-        <a href="#">
+      <div  class="related-story-container" ng-repeat="article in articles.topArticle.relatedArticles | limitTo:3">
+        <a href="#/articles/{{article.genre}}/{{article.pageid}}">
           <div class=" animated fadeIn">
             <p ng-class="genreHeadline">{{article.headline}}</p>
           </div>
@@ -22,8 +22,8 @@
 
   <div class="" ng-repeat="article in articles.subTopArticles">
     <div class="sub-article-container animated fadeIn">
-      <a href="#">
-        <img class="sub-article-img" ng-src="{{article.img}}" alt="">
+      <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+        <img class="sub-article-img" onerror="this.src='pno-placeholder.png'" ng-src="{{article.img}}" alt="">
         <div class="sub-article-tagline" ng-class="genreClass">
           <p>{{article.tagline}}</p>
         </div>
@@ -39,11 +39,11 @@
 
   <div class="" ng-repeat="article in articles.hotArticles">
     <div class="hot-article-list-container animated fadeIn">
-      <a href="#">
-        <img class="hot-article-list-img" ng-src="{{article.img}}" alt="">
+      <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+        <img class="hot-article-list-img" onerror="this.src='pno-placeholder.png'" ng-src="{{article.img}}" alt="">
         <h3 class="hot-article-list-headline" ng-class="genreHeadline">{{article.headline}}</h3>
       </a>
-      <p class="hot-article-list-snippet">{{article.snippet}}</p>
+      <p class="hot-article-list-snippet">{{article.snippet | limitTo:300}}...</p>
     </div>
   </div>
 
@@ -55,7 +55,7 @@
   <div class="article-list">
     <div class="article-list-container" dir-paginate="article in articles.articles | itemsPerPage: 14">
       <div class=" animated fadeIn">
-        <a href="#">
+        <a href="#/articles/{{article.genre}}/{{article.pageid}}">
 
           <p class="article-list-headline" ng-class="genreHeadline">{{article.headline}}</p>
         </a>
@@ -71,6 +71,9 @@
   </div>
 </div>
 
+<div class="content ">
+  <img class="fake-fter-ad" src="./fake-jet-ad.png" alt="fake-ad">
+</div>
 
 
 

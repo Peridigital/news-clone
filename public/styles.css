@@ -275,6 +275,8 @@ body {
   height: 120px;
   width: 200px;
   float: right;
+  background-image: url("./pno-placeholder.png");
+  background-size: 100%;
 }
 .result-list-headline {
   float: left;
@@ -636,4 +638,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e3de', end
   font-size: 0.8em;
   margin-top: -5px;
   color: rgb(128, 128, 128)
+}
+.fake-fter-ad {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin: auto;
 }

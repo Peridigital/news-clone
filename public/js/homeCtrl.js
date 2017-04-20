@@ -7,5 +7,7 @@ angular.module('pnoApp').controller('homeCtrl', function($scope, $state, $stateP
     $scope.genreHeadline = 'homeHeadline'
   }
   $scope.enterPage()
-  $scope.articles = articleService.getHomeArticles()
+  articleService.getHomeArticles().then(function (res) {
+    $scope.articles = res
+  })
 })

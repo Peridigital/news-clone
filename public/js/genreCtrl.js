@@ -12,6 +12,8 @@ angular.module('pnoApp').controller('genreCtrl', function($scope, $state, $state
 
   }
   $scope.enterPage()
-  $scope.articles = articleService.getArticlesByGenre($scope.genreClass);
+  articleService.getArticlesByGenre($scope.genreClass).then(function (res) {
+    $scope.articles = res
+  });
 
 })
