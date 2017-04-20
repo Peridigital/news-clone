@@ -1,0 +1,12 @@
+<div class="home-carousel">
+  <div ng-repeat="article in articles"class="">
+    <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+      <div class="home-top-article-img-container">
+        <img class="home-top-article-img" ng-src="{{article.img}}" alt="">
+        <div class="home-top-article-headline" ng-class="genreClass">
+          <p>{{article.headline}}</p>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>

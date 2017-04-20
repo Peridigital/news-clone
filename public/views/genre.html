@@ -1,0 +1,86 @@
+<header-directive genre="genre" genre-class="genreClass" genre-text="genreText"></header-directive>
+<div class="content">
+  <a href="#/articles/{{articles.topArticle.genre}}/{{articles.topArticle.pageid}}">
+    <div class="top-article-container ">
+      <div class="top-article-img-container animated fadeIn">
+        <img class="top-article-img" ng-src="{{articles.topArticle.img}}" alt="">
+        <div class="top-article-headline" ng-class="genreClass">
+          <p>{{articles.topArticle.headline}}</p>
+        </div>
+      </div>
+  </a>
+    <div class="related-article-repeater">
+      <div  class="related-story-container" ng-repeat="article in articles.topArticle.relatedArticles | limitTo:3">
+        <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+          <div class=" animated fadeIn">
+            <p ng-class="genreHeadline">{{article.headline}}</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="" ng-repeat="article in articles.subTopArticles">
+    <div class="sub-article-container animated fadeIn">
+      <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+        <img class="sub-article-img" onerror="this.src='pno-placeholder.png'" ng-src="{{article.img}}" alt="">
+        <div class="sub-article-tagline" ng-class="genreClass">
+          <p>{{article.tagline}}</p>
+        </div>
+        <p class="sub-article-headline" ng-class="genreHeadline">{{article.headline}}</p>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="content">
+  <div class="divide-line">
+    <h2>Hot Stories</h2>
+  </div>
+
+  <div class="" ng-repeat="article in articles.hotArticles">
+    <div class="hot-article-list-container animated fadeIn">
+      <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+        <img class="hot-article-list-img" onerror="this.src='pno-placeholder.png'" ng-src="{{article.img}}" alt="">
+        <h3 class="hot-article-list-headline" ng-class="genreHeadline">{{article.headline}}</h3>
+      </a>
+      <p class="hot-article-list-snippet">{{article.snippet | limitTo:300}}...</p>
+    </div>
+  </div>
+
+
+  <div class="divide-line">
+
+  </div>
+
+  <div class="article-list">
+    <div class="article-list-container" dir-paginate="article in articles.articles | itemsPerPage: 14">
+      <div class=" animated fadeIn">
+        <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+
+          <p class="article-list-headline" ng-class="genreHeadline">{{article.headline}}</p>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="pagination-controls-container">
+    <dir-pagination-controls  template-url="views/dirpagination.tpl.html" genre-headline="genreHeadline" genre-text="genreText"></dir-pagination-controls>
+  </div>
+</div>
+
+<div class="content ">
+  <img class="fake-fter-ad" src="./fake-jet-ad.png" alt="fake-ad">
+</div>
+
+
+
+<footer class="footer">
+  <div class="content">
+    <p>This website was made purely for the purposes of practice. If you would like to sue me, I request that you don't.</p>
+    <p>Pretend News Organization (PNO) is not real, and in fact, made up. Any news article on this site is almost certainly false.</p>
+    <p>Here's some more words: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</footer>

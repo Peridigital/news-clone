@@ -1,0 +1,18 @@
+<div class="home-articles">
+  <a href="#/articles/{{linkGenre}}">
+    <div class="home-articles-header" ng-class="genreClass">
+      <h4>{{genre}}</h4>
+    </div>
+  </a>
+  <div class="home-article-container ">
+    <a href="#/articles/{{articles[0].genre}}/{{articles[0].pageid}}">
+      <img class="home-article-img"src="{{articles[0].img}}" alt="">
+      <p ng-class="genreHeadline">{{articles[0].headline}}</p>
+    </a>
+  </div>
+  <div class="home-article-container " ng-repeat="article in articles.slice(1,articles.length) | limitTo:3">
+    <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+      <p ng-class="genreHeadline">{{article.headline}}</p>
+    </a>
+  </div>
+</div>

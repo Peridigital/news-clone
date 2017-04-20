@@ -1,0 +1,43 @@
+<header-directive genre="genre" genre-class="genreClass" genre-text="genreText"></header-directive>
+<div ng-show="invalid"class="content">
+  <h1>Regrettably,</h1>
+  <p>We were unable to find that article.</p>
+</div>
+<div ng-hide="invalid" class="content animated fadeIn">
+  <h1 class="article-headline">{{article.headline}}</h1>
+
+  <p class="article-author">By <b>{{article.author}}</b>, PNO</p>
+  <p class="article-date">Published {{article.date}}</p>
+  <div class="article-content">
+
+    <img class="article-img" src="{{article.img}}" onerror="this.src='pno-placeholder.png'" alt="">
+    <div class="article-container"ng-class="genreArticle" ng-bind-html="article.body">
+
+    </div>
+  </div>
+  <div class="sidebar-content">
+    <div class="sidebar-top-articles">
+      <div class="sidebar-top-articles-header" ng-class="genreClass">
+        <h4>Top stories</h4>
+      </div>
+      <div class="sidebar-top-article-container" ng-repeat="article in articles.articles | limitTo:3">
+        <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+          <p ng-class="genreHeadline">{{article.headline}}</p>
+        </a>
+      </div>
+    </div>
+    <a href="#">
+      <img class="article-side-ad" src="fake-model-home-ad.png" alt="">
+    </a>
+  </div>
+</div>
+<div class="content">
+  <img class="fake-fter-ad" src="./fake-jet-ad.png" alt="fake-ad">
+</div>
+<footer class="footer">
+  <div class="content">
+    <p>This website was made purely for the purposes of practice. If you would like to sue me, I request that you don't.</p>
+    <p>Pretend News Organization (PNO) is not real, and in fact, made up. Any news article on this site is almost certainly false.</p>
+    <p>Here's some more words: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</footer>

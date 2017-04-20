@@ -1,0 +1,52 @@
+<div class="search-topbar">
+
+</div>
+<div class="search-header home">
+
+  <div class="content logo-container">
+    <a href="#/">
+      <img class="logo"src="./pno-logo.png" alt="PNO logo">
+    </a>
+    <i class="fa fa-search homeText" aria-hidden="true" ></i>
+  </div>
+</div>
+
+
+<div class="search-content">
+  <p class="result-count">{{resultCount}} results found for</p>
+  <form class="search-page-bar"  method="post" ng-submit="search()">
+
+    <input class="search-page-search" type="text" name="text" ng-model="searchParam" >
+    <div class="search-page-button" ng-click="search()">
+      <i class="fa fa-search search-icon" aria-hidden="true" ></i>
+    </div>
+  </form>
+
+</div>
+
+<div class="search-content results">
+  <div class="result-list">
+    <div class="result-list-container" dir-paginate="article in articles | itemsPerPage: 10">
+      <div class=" animated fadeIn">
+        <a href="#/articles/{{article.genre}}/{{article.pageid}}">
+          <img class="result-list-img" onerror="this.src='pno-placeholder.png'"ng-src="{{article.img}}" alt="">
+          <p class="result-list-headline" ng-class="genreHeadline">{{article.headline}}</p>
+        </a>
+        <p class="result-list-snippet">{{article.snippet | limitTo:300}}...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+  <div class="pagination-controls-container">
+    <dir-pagination-controls  template-url="views/dirpagination.tpl.html" genre-headline="genreHeadline" genre-text="genreText"></dir-pagination-controls>
+  </div>
+</div>
+<footer class="footer">
+  <div class="content">
+    <p>This website was made purely for the purposes of practice. If you would like to sue me, I request that you don't.</p>
+    <p>Pretend News Organization (PNO) is not real, and in fact, made up. Any news article on this site is almost certainly false.</p>
+    <p>Here's some more words: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </div>
+</footer>
