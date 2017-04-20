@@ -604,7 +604,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e3de', end
 }
 .home-article-img {
   width: 100%;
-  margin-bottom: -10px;
+  margin-bottom: -5px;
 }
 .home-article-container {
   border-bottom: 1px solid #acacac;
@@ -618,7 +618,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e3de', end
 .home-article-row {
   overflow: hidden;
   border-bottom: 2px solid #acacac;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .fake-ad-square {
   position: relative;

@@ -1,9 +1,10 @@
 const express = require('express'),
       bodyParser = require('body-parser'),
-      massive = require('massive');
+      massive = require('massive'),
+      config = require('./config.js');
 
 const db = massive.connectSync({
-  connectionString : 'postgres://postgres:amd14PLK@localhost/news_clone'
+  connectionString : config.database
 });
 
 
