@@ -6,7 +6,7 @@
   </a>
   <div class="home-article-container ">
     <a href="#/articles/{{articles[0].genre}}/{{articles[0].pageid}}">
-      <img class="home-article-img"src="{{articles[0].img}}" alt="">
+      <img class="home-article-img"src="{{articles[0].img}}" onerror="this.src='pno-placeholder.png'" alt="">
       <p ng-class="genreHeadline">{{articles[0].headline}}</p>
     </a>
   </div>
