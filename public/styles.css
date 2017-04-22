@@ -13,15 +13,14 @@ body {
 }
 .footer {
   width: 100%;
-  height: 250px;
+  min-height: 250px;
   background-color: #303030;
   clear: both;
-  text-align: center;
-  padding: 30px;
+  padding-bottom: 15px;
 }
 .footer p{
-  color: #b0b0b0
-
+  color: #b0b0b0;
+  text-align: center;
 }
 .navbar {
   position: relative;
@@ -640,8 +639,40 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e3de', end
   color: rgb(128, 128, 128)
 }
 .fake-fter-ad {
+  display: inline-block;
   position: relative;
   left: 50%;
   transform: translate(-50%);
   margin: auto;
+}
+.weather-container {
+  position: relative;
+  text-align: left;
+  color: white;
+
+}
+.weather-container img {
+  transform: translate(0, 40%);
+}
+.weather-logo-container{
+  float: left;
+  width: 100px;
+}
+.weather-logo-container img {
+  display: inline-block;
+  height: 12px;
+}
+.weather-logo-container h4 {
+  display: inline-block;
+  color: white;
+  margin: 24px 0;
+}
+.zipcode-form {
+  float: left;
+  margin: 24px 10px;
+
+}
+.zipcode-form  input{
+  width: 60px;
+  font-family: 'Nunito Sans', sans-serif;
 }
