@@ -653,6 +653,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e3de', end
 }
 .weather-container img {
   transform: translate(0, 40%);
+  height: 50px;
+  width: 50px;
 }
 .weather-logo-container{
   float: left;
@@ -675,4 +677,140 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e3de', end
 .zipcode-form  input{
   width: 60px;
   font-family: 'Nunito Sans', sans-serif;
+}
+.btn-group {
+  float: left;
+  margin: 5px;
+}
+.btn {
+  float: left;
+  padding: 7px;
+  background-color: #f0f0f0;
+  border: 1px solid rgb(135, 135, 135);
+  border-radius: 0px;
+}
+.btn-group > button {
+
+  border-left-width: 0px;
+}
+.btn-group > :first-child {
+
+  border-left-width: 1px;
+
+}
+
+.btn.active{
+  background-color: #a0d000;
+}
+.btn.active:disabled {
+  background-color: #EEEEEE
+}
+.btn:disabled {
+  border-color: rgb(164, 164, 164);
+  background-color: #EEEEEE
+}
+div.btn {
+  text-align: center;
+
+  background-color: rgba(244, 30, 201, 0);
+  border-width:  0px;
+}
+.ta-bind {
+  border: 1px solid rgb(103, 103, 103);
+  background-color: white;
+
+}
+.ta-text {
+  clear: both;
+}
+.ta-bind p {
+  margin: 5px 0;
+}
+.ta-bind a {
+  color: #a0d000;
+  text-decoration: underline;
+}
+.admin-view-controller {
+  background-color: #f6f6f6;
+  min-height: 700px;
+  position: relative;
+  border-left: 2px solid #999999;
+  border-right: 2px solid #999999;
+  padding: 25px;
+}
+.article-composer {
+  margin-bottom: 25px;
+  overflow: hidden;
+}
+.article-input {
+  height: 30px;
+  width: 373px;
+  font-size: 1.2em
+}
+.article-composer-top-options {
+  float: left;
+  margin-bottom: 17px;
+}
+.article-composer-img {
+  float: right;
+}
+.article-composer-img > img {
+  width: 373px;
+  float: right;
+  clear: both;
+  margin-top: 19px;
+}
+.article-composer-img > h3 {
+  text-align: right;
+}
+.article-composer-img > input {
+  float: right;
+}
+.article-composer-bottom-option {
+  float: left;
+  margin-right: 10px;
+  width: 30%;
+}
+.article-composer-bottom-option * {
+  width: 250px;
+}
+.article-side-button {
+  position: absolute;
+  height: 40px;
+  width: 100px;
+  border: 3px solid #a0d000;
+  border-right-width: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  left: -102px;
+  text-align: center;
+  cursor: pointer;
+}
+.articleSideButtonActive {
+  background-color: #a0d000;
+  color: white;
+
+}
+.article-side-button h3 {
+  margin: 4px;
+}
+.article-side-button:first-child {
+  top: 80px;
+}
+.article-side-button:last-child {
+  top: 10px;
+}
+.article-preview {
+  overflow: hidden;
+}
+.article-submit-button {
+  background-color: #a0d000;
+  clear: both;
+  float: right;
+  padding: 10px;
+}
+.article-submit-button h3 {
+  margin: 0px;
+  color: white;
+  cursor: pointer;
 }

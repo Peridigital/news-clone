@@ -1,3 +1,4 @@
+
 <header-directive genre="genre" genre-class="genreClass" genre-text="genreText" ></header-directive>
 
 <div class="home-page">
@@ -40,25 +41,4 @@
 <div class="content ">
   <img class="fake-fter-ad" src="./fake-jet-ad.png" alt="fake-ad">
 </div>
-
-<footer class="footer">
-  <div class="content">
-    <div ng-hide="weatherEvent" class="weather-logo-container">
-      <img src="./pno-logo.png" alt="">
-      <h4>Weather</h4>
-    </div>
-    <div ng-show="weatherEvent" class="weather-container animated fadeInLeft">
-      <span>{{weather.name}}</span> <img ng-src="{{weatherIcon}}" alt=""> <span>{{temp}}°</span>
-    </div>
-
-    <form ng-hide="weatherEvent" ng-class="{ fadeOut: weatherEvent == true }" class="zipcode-form animated" method="post" ng-submit="getWeatherByZipCode()">
-      <input class="" type="text" name="text" ng-model="zipcode" placeholder="Zipcode">
-    </form>
-  </div>
-  <div class="content">
-
-    <p>This website was made purely for the purposes of practice. If you would like to sue me, I request that you don't.</p>
-    <p>Pretend News Organization (PNO) is not real, and in fact, made up. Any news article on this site is almost certainly false.</p>
-    <p>Here's some more words: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-  </div>
-</footer>
+<footer-template-directive></footer-template-directive>

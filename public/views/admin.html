@@ -1,0 +1,92 @@
+<div class="search-topbar">
+
+</div>
+<div class="search-header home">
+
+  <div class="content logo-container">
+    <a href="#/">
+      <img class="logo"src="./pno-logo.png" alt="PNO logo">
+    </a>
+    <h2 class="genre-header home-text" ng-class="genreText">Admin</h2>
+  </div>
+</div>
+
+
+<div class="admin-view-controller content">
+  <div ng-class="{ articleSideButtonActive : preview }" class="article-side-button" ng-click="switchToPreview()">
+    <h3>Preview</h3>
+  </div>
+  <div ng-class="{ articleSideButtonActive : composer }" class="article-side-button" ng-click="switchToComposer()">
+    <h3>Compose</h3>
+  </div>
+
+<div ng-show="composer" class="article-composer ">
+
+  <div class="content">
+    <h1>Compose An Article</h1>
+  </div>
+  <div class="content">
+    <div class="article-composer-top-options">
+      <h3>Headline</h3>
+      <input class="article-input"type="text" name="" ng-model="headline">
+
+      <h3>Tagline</h3>
+      <input class="article-input"type="text" name="" ng-model="tagline">
+
+      <h3>Preview</h3>
+      <textarea name="name" rows="5" cols="50" ng-model="snippet"></textarea>
+    </div>
+
+    <div class="article-composer-img">
+      <h3>Image</h3>
+      <input class="article-input" type="text" name="" value="" ng-model='imgUrl'>
+      <img  src="{{imgUrl}}" onerror="this.src='pno-placeholder.png'" alt="">
+
+    </div>
+  </div>
+
+  <div class="content">
+    <h3>Body</h3>
+    <div text-angular ng-model="articleBody"></div>
+  </div>
+
+  <div class="content">
+
+    <div class="article-composer-bottom-option">
+      <h3>Author</h3>
+      <input class="article-input"type="text" name="" ng-model="author">
+    </div>
+    <div class="article-composer-bottom-option">
+      <h3>Related Tag</h3>
+      <input class="article-input"type="text" name="" ng-model="relatedTag">
+    </div>
+    <div class="article-composer-bottom-option">
+      <h3>Genre</h3>
+      <select class="article-input" class="" name="" ng-model="articleGenre">
+        <option value="{{genre.genre}}" ng-repeat="genre in genres">{{genre.genre}}</option>
+      </select>
+    </div>
+    <div class="article-submit-button">
+      <h3>Submit</h3>
+    </div>
+  </div>
+
+
+</div>
+<div  ng-show="preview"class="content article-preview">
+  <h1 class="article-headline">{{article.headline}}</h1>
+
+  <p class="article-author">By <b>{{article.author}}</b>, PNO</p>
+  <p class="article-date">Published {{article.date}}</p>
+  <div class="article-content">
+
+    <img class="article-img" src="{{article.img}}" onerror="this.src='pno-placeholder.png'" alt="">
+    <div class="article-container"ng-class="genreArticle" ng-bind-html="article.body">
+
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer-template-directive></footer-template-directive>
